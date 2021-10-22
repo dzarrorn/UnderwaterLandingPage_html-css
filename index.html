@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Underwater</title>
+  </head>
+  <body>
+    <!-- header section starts -->
+    <header>
+      <a href="#" class="logo"><h1>logo</h1></a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">blogs</a></li>
+          <li><a href="#">login</a></li>
+        </ul>
+      </nav>
+      <div class="fas fa-bars"></div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section start -->
+    <div class="container">
+      <div class="content">
+        <h1>underwater</h1>
+        <h2>adventure</h2>
+        <a href="#"><button>join now</button></a>
+        <div class="icons">
+          <a href="" class="fab fa-facebook-f"></a>
+          <a href="" class="fab fa-twitter"></a>
+          <a href="" class="fab fa-instagram"></a>
+        </div>
+      </div>
+
+      <div class="video-container">
+        <video
+          src="video/underwater1.mp4"
+          autoplay
+          muted
+          loop
+          class="vid1"
+        ></video>
+        <video
+          src="video/underwater2.mp4"
+          autoplay
+          muted
+          loop
+          class="vid2"
+        ></video>
+        <video
+          src="video/underwater3.mp4"
+          autoplay
+          muted
+          loop
+          class="vid3"
+        ></video>
+      </div>
+
+      <div class="controls">
+        <div class="dots dot1"></div>
+        <div class="dots dot2"></div>
+        <div class="dots dot3"></div>
+      </div>
+    </div>
+
+    <!-- home section ends -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jquery pat start -->
+    <script>
+      $(document).ready(function () {
+        $(".fa-bars").click(function () {
+          $(this).toggleClass("fa-times");
+          $(".navbar").toggleClass("nav-toggle");
+        });
+        $(".navbar").click(function () {
+          $(this).removeClass("nav-toggle");
+          $(".fa-bars").removeClass("fa-times");
+        });
+        $(".dot1").click(function () {
+          $(".vid1").css("display", "block");
+          $(".vid2").css("display", "none");
+          $(".vid3").css("display", "none");
+        });
+        $(".dot2").click(function () {
+          $(".vid1").css("display", "none");
+          $(".vid2").css("display", "block");
+          $(".vid3").css("display", "none");
+        });
+        $(".dot3").click(function () {
+          $(".vid1").css("display", "none");
+          $(".vid2").css("display", "none");
+          $(".vid3").css("display", "block");
+        });
+      });
+    </script>
+  </body>
+</html>
